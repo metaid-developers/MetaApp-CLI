@@ -1,0 +1,180 @@
+.outsideMore {
+  margin-right: 14px;
+  position: relative;
+  .metanameLogo {
+    width: 22px;
+    height: 22px;
+  }
+  .MintLogo {
+    width: 22px;
+    height: 22px;
+  }
+  .new-tag {
+    position: absolute;
+    top: -37%;
+    right: -50%;
+    font-size: 11px;
+    color: #fff;
+    padding: 3px 5px;
+    background-color: #fc6d5e;
+    border-radius: 8px;
+  }
+}
+
+.fee-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 16px;
+  transition: all 0.15s ease;
+
+  .dark & {
+    background: #2d3748;
+  }
+
+  &:hover {
+    background: #e2e8f0;
+    .dark & {
+      background: #4a5568;
+    }
+  }
+
+  .chain-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .fee-rate {
+    color: var(--el-color-primary);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .fee-unit {
+    color: var(--themeTextColor);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--themeTextColor);
+    opacity: 0.6;
+  }
+}
+
+.user-warp {
+ 
+  .avatar {
+    cursor: pointer;
+  }
+}
+
+.user-warp-item {
+  margin-right: 8px;
+
+  @media (min-width: 768px) {
+    margin-right: 12px;
+  }
+
+  width: 36px !important;
+  height: 36px !important;
+
+  border-radius: calc(100% / 2.5);
+  border: var(--standard-border-width) solid #6b7280;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    border-color: var(--border-color);
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.connect-wallet {
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 18px;
+}
+
+.user-operate-item {
+  padding: 17px 48px;
+
+  cursor: pointer;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+  }
+
+  .isnew {
+    margin-left: 8px;
+    background-color: #fc6d5e;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}
+
+.balance {
+  padding: 0 18px;
+}
+
+.fee-select {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // gap: 21px;
+  // margin: 30px auto 12px;
+  cursor: pointer;
+  .fee-info {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    flex: 1;
+
+    .fee-rate-menu {
+      color: #fc457b;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .fee-unit-menu {
+      color: var(--themeTextColor);
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .arrow-icon-menu {
+    color: var(--themeFadedTextColor);
+  }
+}
+
+.more {
+  margin-right: 0;
+}
+
+.version-warp {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .user-warp-item {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

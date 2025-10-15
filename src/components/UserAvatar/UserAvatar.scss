@@ -1,0 +1,82 @@
+// UserAvatar 样式
+// Element UI 已完全移除，现在使用 Tailwind CSS + 自定义样式
+
+// 头像容器样式
+.avatar {
+  position: relative;
+  display: inline-block;
+  
+  // 图片样式
+  :deep(img) {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--divid-color, #e5e7eb);
+  }
+  
+  // Skeleton 加载状态样式（使用 Tailwind animate-pulse）
+  :deep(.skeleton-wrapper) {
+    border-radius: 50%;
+    overflow: hidden;
+    
+    .skeleton-image {
+      border-radius: 50%;
+      background: linear-gradient(
+        90deg,
+        #f3f4f6 25%,
+        #e5e7eb 50%,
+        #f3f4f6 75%
+      );
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+// 头像圆角样式（用于 customClass）
+.avatar-rounded {
+  border-radius: 40%;
+  overflow: hidden;
+}
+
+// 头像容器样式（如果需要）
+[class*='avatar-container-'] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// 头像画布样式（如果需要）
+[class*='avatar-canvas-'] {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// Skeleton 加载动画
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// 暗黑模式
+:global(.dark) {
+  .avatar {
+    :deep(img) {
+      border-color: var(--divid-color, #374151);
+    }
+    
+    :deep(.skeleton-wrapper .skeleton-image) {
+      background: linear-gradient(
+        90deg,
+        #374151 25%,
+        #4b5563 50%,
+        #374151 75%
+      );
+      background-size: 200% 100%;
+    }
+  }
+}
