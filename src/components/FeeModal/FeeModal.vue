@@ -199,7 +199,7 @@
       </div>
 
       <!-- OK Button -->
-      <button class="ok-button main-border primary" @click="handleConfirm">
+      <button class="ok-button main-border primary " @click="handleConfirm">
         OK
       </button>
     </div>
@@ -400,6 +400,15 @@ watch(
       &.selected {
         border: 2px solid var(--themeTextColor);
         background: var(--color-primary);
+           .fee-label {
+            color: #fff;
+          }
+          .fee-value {
+            color: #fff;
+          }
+          .fee-time {
+            color: #fff;
+          }
       }
     }
   }
@@ -471,7 +480,7 @@ watch(
   border-radius: 8px;
   cursor: pointer;
   margin-top: 16px;
-  color: var(--themeTextColor);
+  color:#fff; //var(--themeTextColor);
   border: none;
   transition: all 0.15s ease;
 }

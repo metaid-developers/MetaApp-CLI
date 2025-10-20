@@ -224,59 +224,28 @@ pre {
     background: var(--color-primary, #3b82f6); // 替代 var(--el-color-primary)，使用蓝色作为默认主色
   }
 
-  .dark &.primary {
-    --border-color: var(--primary-border-color);
-    color: var(--normal-border-color);
-  }
+ 
 
-  // 褪色边框
-  &.faded {
-    --border-color: var(--faded-border-color);
-    background: #EDEFF2;
-    color: var(--faded-border-color);
-  }
+  
 
-  .dark &.faded {
-    --border-color: var(--faded-border-color);
-    background: #1F2937;
-    color: var(--faded-border-color);
-  }
+ 
 
-  &.faded-switch:not(:active, :hover):placeholder-shown {
-    --border-color: var(--faded-border-color);
-  }
+ 
 
-  &.small {
-    --standard-offset: 2PX;
-    --standard-border-width: 1PX;
-  }
+ 
 
 
   // 只有下阴影的情况
-  &.only-bottom {
-    --right-offset: 0PX;
-  }
-
+ 
+  color: #fff;
   border: var(--standard-border-width) solid var(--border-color);
-  box-shadow: var(--right-offset) var(--standard-offset) 0 var(--border-color);
+  //box-shadow: var(--right-offset) var(--standard-offset) 0 var(--border-color);
   border-radius: var(--rounded);
   transition-property: all;
   transition-duration: 200ms;
   user-select: none;
 
-  // hover时浮起（只在桌面端）
-  @media (min-width: 1024PX) {
-    &:not(.still):hover:not(:active) {
-      box-shadow: calc(var(--right-offset) + var(--move-range) / 2) calc(var(--standard-offset) + var(--move-range) / 2) 0 var(--border-color);
-      transform: translateX(calc(0PX - var(--move-range) / 2)) translateY(calc(0PX - var(--move-range) / 2));
-    }
-  }
-
-  // active时下沉
-  &:not(.still):active {
-    box-shadow: calc(var(--right-offset) - var(--move-range)) calc(var(--standard-offset) - var(--move-range)) 0 var(--border-color);
-    transform: translateX(var(--move-range)) translateY(var(--move-range));
-  }
+ 
 
   &.disabled {
     cursor: not-allowed;
