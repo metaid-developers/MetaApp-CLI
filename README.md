@@ -137,13 +137,7 @@ src/
    npm install
    ```
 
-## 📚 文档
 
-- [完整指南](COMPLETE_GUIDE.md)
-- [开发指南](DEVELOPMENT.md)
-- [快速参考](QUICK_REFERENCE.md)
-- [用户系统](USER_SYSTEM.md)
-- [钱包集成](METALET_INTEGRATION.md)
 
 ## 🤝 贡献
 
