@@ -1,7 +1,7 @@
 
-
+import { useConfig } from '@/hooks/use-config';
 export function metafile(metafile: string, width = 235, type: 'metafile' | 'metaId' = 'metafile') {
-  
+ 
   if (typeof metafile !== 'string') return ''
   if (metafile.indexOf('http://') !== -1 || metafile.indexOf('https://') !== -1) return metafile
   metafile = metafile.replace('metafile://', '')
@@ -34,8 +34,10 @@ export function metafile(metafile: string, width = 235, type: 'metafile' | 'meta
       path='/content/'
     }
   }
-
-  const fileUrl = `${import.meta.env.VITE_MAN_API}${path}${metafile}`
+       const {
+        manBaseUrl
+        } = useConfig();
+  const fileUrl = `${manBaseUrl.value}${path}${metafile}`
    
   // 文件后缀
   const fileSuffix = metafile.split('.')[metafile.split('.').length - 1]

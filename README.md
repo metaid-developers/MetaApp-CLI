@@ -101,7 +101,66 @@ src/
 
 ## 🔧 环境配置
 
-项目使用 `.env` 文件进行环境配置，请参考 `ENV_CONFIG.md` 了解详细配置选项。
+### 动态配置系统
+
+项目支持通过修改 `public/app-config.json` 文件来动态调整应用行为，无需重新打包：
+
+```json
+{
+  "app": {
+    "name": "MetaID Demo App",
+    "version": "2.0.0",
+    "environment": "production",
+    "debug": false
+  },
+  "api": {
+   
+    "timeout": 10000,
+    "retryAttempts": 3
+  },
+  "features": {
+    "enableUpload": true,
+    "enableProfileEdit": true,
+    "enableNotifications": true,
+    "enableAnalytics": false
+  },
+  "ui": {
+    "theme": "light",
+    "language": "zh-CN",
+    "showWelcomeMessage": true,
+    "maxFileSize": "10MB"
+  }
+}
+```
+
+### 配置使用方式
+
+在组件中使用配置：
+
+```vue
+<script setup>
+import { useConfig } from '@/hooks/use-config';
+
+const { 
+  config, 
+  isFeatureEnabled, 
+  apiBaseUrl,
+  isDebugMode 
+} = useConfig();
+
+// 检查功能是否启用
+if (isFeatureEnabled('enableUpload').value) {
+  // 显示上传功能
+}
+
+// 获取API基础URL
+const apiUrl = apiBaseUrl.value;
+</script>
+```
+
+### 配置热更新
+
+修改 `public/app-config.json` 后，刷新页面即可生效，无需重新打包。
 
 ## 🐛 故障排除
 

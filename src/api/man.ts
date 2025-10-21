@@ -1,8 +1,15 @@
 import { HttpRequest } from '@/utils/http'
+import { useConfig } from '@/hooks/use-config';
 
+const {
+  manBaseUrl
+} = useConfig();
+
+
+debugger
 // 创建 MAN API 实例，配置自定义响应处理
 const manApiInstance = new HttpRequest(
-  `${import.meta.env.VITE_MAN_API}/api` || 'https://man-test.metaid.io/api',
+  `${manBaseUrl.value}/api` || 'https://man-test.metaid.io/api',
   {
     // 自定义响应处理器（适配 MAN API 的响应格式）
     responseHandler: (response) => {

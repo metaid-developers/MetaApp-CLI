@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "MetaID Demo App",
+    "version": "1.0.0",
+    "environment": "production",
+    "debug": false
+  },
+  "api": {
+    
+    "MAN_BASE_URL":"https://man.metaid.io",
+    "timeout": 10000,
+    "retryAttempts": 3
+  },
+  "wallet": {
+    "network": "mainnet",
+    "autoConnect": true,
+    "showBalance": true
+  },
+  "features": {
+    "enableUpload": true,
+    "enableProfileEdit": true,
+    "enableNotifications": true,
+    "enableAnalytics": false
+  },
+  "ui": {
+    "theme": "light",
+    "language": "zh-CN",
+    "showWelcomeMessage": true,
+    "maxFileSize": "10MB"
+  },
+  "security": {
+    "enableCSP": true,
+    "enableHSTS": true
+   
+  }
+}

@@ -8,6 +8,7 @@ import {
 import { useEcdhsStore } from '@/stores/ecdh'
 import { getEcdhPublickey } from '@/wallet-adapters/metalet'
 import { decryptToBlob } from '@/utils/crypto'
+import { useConfig } from '@/hooks/use-config';
 
 export interface MetafileSchems {
   txId?: string
@@ -46,13 +47,16 @@ export class DBClass extends Dexie {
     }>(async resolve => {
       try {
         
+      const {
+      manBaseUrl
+      } = useConfig();
         const txId = this.getMetaFileTxId(metafile)
       
         
         const fileUrl =
           width !== -1
             ? tranformMetafile(metafile, width)
-            : `${import.meta.env.VITE_MAN_API}/content/${txId}`
+            : `${manBaseUrl.value}/content/${txId}`
             
         if (isPrivateChat && chatPubkeyForDecrypt) {
           
