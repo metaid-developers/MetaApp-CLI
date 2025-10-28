@@ -8,6 +8,18 @@ export function sleep(timer = 2000) {
   })
 }
 
+export function completeReload() {
+  // dump search params then reload
+  const url = new URL(window.location.href)
+
+  url.searchParams.delete('clear')
+  url.searchParams.delete('address')
+
+  window.location.href = url.href
+
+  return
+}
+
 export async function getFileDataFromUrl(fileUrl: string): Promise<ArrayBuffer | undefined> {
   try {
     const response = await fetch(fileUrl)
