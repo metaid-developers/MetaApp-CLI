@@ -88,7 +88,7 @@ export const useUserStore = defineStore('user', {
       try {
         if (userRes) {
           this.last = userRes
-          debugger
+          
           if (!this.last.name) {
             console.log(this.last, 'this.last')
             const layoutStore =useLayoutStore()
