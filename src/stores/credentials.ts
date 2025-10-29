@@ -147,7 +147,7 @@ export const useCredentialsStore =defineStore('credentials', {
       const credential = await this.sign()
       
       if (!credential) return false
-      debugger
+      
       const userStore=useUserStore()
       await userStore.setUserInfo(credential.address)
       return credential

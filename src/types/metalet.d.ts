@@ -88,7 +88,7 @@ export interface MetaletWallet {
   // 账户管理
   connect: () => Promise<MetaletAccount>
   disconnect: () => Promise<{ status: string }>
-  getAddress: () => Promise<{ address: string }>
+  getAddress: () => Promise<string>
   
   // 余额
   getBalance: () => Promise<BalanceInfo>

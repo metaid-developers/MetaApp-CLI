@@ -6,7 +6,7 @@ const {
 } = useConfig();
 
 
-debugger
+
 // 创建 MAN API 实例，配置自定义响应处理
 const manApiInstance = new HttpRequest(
   `${manBaseUrl.value}/api` || 'https://man-test.metaid.io/api',
@@ -82,11 +82,11 @@ export interface UserInfo {
 }
 
 export const getUserInfoByAddress = async (address: string): Promise<UserInfo> => {
-  debugger
+  
 
   return manApi.get(`/info/address/${address}`).then(res => {
    
-    debugger
+    
     return res
   })
 }

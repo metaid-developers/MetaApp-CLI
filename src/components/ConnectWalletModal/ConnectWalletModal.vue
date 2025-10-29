@@ -127,7 +127,7 @@ const wallets = [
 ]
 
 async function connectMetalet() {
-  debugger
+  
    if (!window.metaidwallet) {
     setMissingWallet('metalet')
    

@@ -1187,7 +1187,7 @@ export const useBuildTx = createGlobalState(() => {
     params: UnifiedTransactionParams
   ): Promise<CreatePinResult | null> => {
     console.log(`🔧 [SMART] Building transaction with params:`, params)
-    debugger
+    
     try {
       // 自动识别协议规则
       const protocolRule = detectProtocol(params)

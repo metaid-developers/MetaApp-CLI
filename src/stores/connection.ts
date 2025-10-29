@@ -151,7 +151,7 @@ export const useConnectionStore = defineStore('connection', {
           }
 
       let connectRes = await getWalletAdapter(wallet).connect()
-          debugger
+          
       try {
         if (connectRes) {
      

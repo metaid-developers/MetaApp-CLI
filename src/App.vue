@@ -159,7 +159,7 @@ onMounted(async () => {
       if (window.metaidwallet && connectionStore.last.status == 'connected' && userStore.isAuthorized) {
         const res = await window.metaidwallet.getAddress()
 
-        if ((res as any)?.status === 'not-connected' || userStore.last?.address !== res.address) {
+        if ((res as any)?.status === 'not-connected' || userStore.last?.address !== res) {
           connectionStore.disconnect()
           showToast('Metalet 账户已变更','warning')
         }
