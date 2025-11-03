@@ -5,6 +5,7 @@ import { useConnectionStore } from '@/stores/connection'
 import { toast } from '@/utils/toast'
 import { useLayoutStore } from './layout'
 
+
 export const useUserStore = defineStore('user', {
   state: () => {
     return {
@@ -30,7 +31,8 @@ export const useUserStore = defineStore('user', {
         pinId: '',
         soulbondToken: '',
         unconfirmed: '',
-        chatpubkey:''
+        chatpubkey:'',
+  
       } as UserInfo) as RemovableRef<UserInfo>,
     }
   },
@@ -39,7 +41,8 @@ export const useUserStore = defineStore('user', {
     has: (state) => !!state.last,
     isAuthorized: (state) => {
       const connectedStore = useConnectionStore()
-      return !!(state.last.address && state.last.metaid && connectedStore.last.status == 'connected')
+  
+      return  !!(state.last.address && state.last.metaid && connectedStore.last.status == 'connected')
     },
 
   },
@@ -77,6 +80,7 @@ export const useUserStore = defineStore('user', {
             pinId: '',
             soulbondToken: '',
             unconfirmed: '',
+        
           }
 
       if (!address) {
@@ -128,7 +132,8 @@ export const useUserStore = defineStore('user', {
         pinId: '',
         soulbondToken: '',
         unconfirmed: '',
-        chatpubkey: ''
+        chatpubkey: '',
+        
       }
     }
    
