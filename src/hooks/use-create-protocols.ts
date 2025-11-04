@@ -36,7 +36,7 @@ async function createBuzz(metaidData:Omit<MetaidData, 'revealAddr'>,options:Crea
         const result = await buildTransaction({
         path: metaidData.path,
         body: JSON.stringify(metaidData.body),
-      
+         contentType:metaidData.contentType
         })
 
         console.log('createBuzz result', result)
@@ -102,7 +102,7 @@ async function createPayLike(metaidData:Omit<MetaidData, 'revealAddr'>,options:C
         const result = await buildTransaction({
         path: metaidData.path,
         body: JSON.stringify(metaidData.body),
-     
+        contentType:metaidData.contentType
         })
 
         console.log('createPayLike result', result)

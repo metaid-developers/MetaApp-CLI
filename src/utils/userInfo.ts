@@ -1,4 +1,4 @@
-import { TxComposer, mvc } from 'meta-contract'
+ import { TxComposer, mvc } from 'meta-contract'
 import { sleep } from './util'
 import { isNil } from 'lodash'
 import axios from 'axios'
