@@ -4,7 +4,7 @@
     <a class="main-border primary connect-wallet" @click="openConnectionModal">Connect Wallet</a>
   </template>
 
-  <template v-else-if="!credentialsStore.get && ">
+  <template v-else-if="!credentialsStore.get">
     <a class="main-border primary connect-wallet" @click="credentialsStore.login()">Authorize</a>
   </template>
 
