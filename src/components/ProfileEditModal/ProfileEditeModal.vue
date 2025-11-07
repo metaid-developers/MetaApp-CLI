@@ -88,7 +88,7 @@
             v-model="username"
             type="text"
             placeholder="What's Your MetaWeb User Name?"
-            class=" main-border w-full text-base px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+            class="main-border !text-gray-700  w-full text-base px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           />
         </div>
         <div class="username-section mb-6">
@@ -99,7 +99,7 @@
             v-model="profile"
             type="text"
             placeholder="Profile (Optional)"
-            class="main-border  w-full text-base  px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+            class="main-border !text-gray-700   w-full text-base  px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           />
         </div>
         <div class="flex justify-end">

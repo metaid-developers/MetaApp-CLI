@@ -1,7 +1,7 @@
 {
   "name": "metaid-demo-app",
   "private": true,
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Vue 3 + Metalet Wallet + Complete Login/Registration Flow (Reference: IDChat) - Enterprise-grade Web3 DApp",
   "type": "module",
   "author": "",
